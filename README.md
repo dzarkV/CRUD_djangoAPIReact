@@ -7,6 +7,6 @@ Puedes tipear:
    
 `docker built -t crud_backend_django`
 
-2) O puedes optar por usar `docer-compose` con el servicio de frontend [aqui]().
+2) O puedes optar por usar `docer-compose` con el servicio de frontend [aqui](https://github.com/dzarkV/CRUD_djangoAPIReact_fe).
    
 `docker-compose up --build`
