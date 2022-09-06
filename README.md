@@ -1,4 +1,4 @@
-# Dockerizing_reactCRUD_djangoAPI
+# CRUD_djangoAPIReact_be
 Proceso de dockerización para empaquetar, deplegar y correr aplicación de Django CRUD.
 
 Puedes tipear:
