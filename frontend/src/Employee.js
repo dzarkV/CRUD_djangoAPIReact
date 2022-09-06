@@ -38,7 +38,7 @@ export class Employee extends Component{
         }
     }
     render(){
-        const {emps, compid,compname,addr,photofilename,compnit,number}=this.state;
+        const {emps, compid,compname,addr,compnit,number}=this.state;
         let addModalClose=()=>this.setState({addModalShow:false});
         let editModalClose=()=>this.setState({editModalShow:false});
         return(

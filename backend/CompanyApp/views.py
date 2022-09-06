@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
-
+from rest_framework import generics
 from CompanyApp.models import Company
 from CompanyApp.serializers import CompanySerializer
 
@@ -25,7 +25,7 @@ def companyApi(request,id=0):
     
     elif request.method=='PUT':
         company_data = JSONParser().parse(request)
-        company = Company.objects.get(CompanyId = company_data['CompanyId'])
+        company = Company.objects.get(CompanyName = company_data['CompanyName'])
         company_serializer = CompanySerializer(company,data = company_data)
         if company_serializer.is_valid():
             company_serializer.save()
@@ -34,5 +34,5 @@ def companyApi(request,id=0):
 
     elif request.method=='DELETE':
         company = Company.objects.get(CompanyId=id)
-        employee.delete()
+        company.delete()
         return JsonResponse("Deleted Succeffully!!", safe=False)
